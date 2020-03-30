@@ -1,0 +1,17 @@
+{
+	"required_api_version": "^2.0.0",
+	"name": "npms",
+	"description": "Search for Javascript packages at npms.io.",
+	"developer_name": "Rolf Koenders",
+	"icon": "images/icon.png",
+	"options": {
+		"query_debounce": 1.5
+	},
+	"preferences": [{
+		"id": "npms_kw",
+		"type": "keyword",
+		"name": "npm",
+		"description": "Search for javascript packages",
+		"default_value": "npm"
+	}]
+}
