@@ -65,7 +65,7 @@ class KeywordQueryEventListener(EventListener):
             items.append(ExtensionResultItem(icon='images/icon.png',
                                          name=package['title'],
                                          description='crap',
-                                         on_enter=OpenUrlAction(package['link'])))
+                                         on_enter=OpenUrlAction("https://youtube.com" + package['link'])))
 
         return RenderResultListAction(items)
 
