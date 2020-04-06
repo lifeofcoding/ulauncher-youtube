@@ -1,17 +1,17 @@
 {
 	"required_api_version": "^2.0.0",
-	"name": "npms",
-	"description": "Search for Javascript packages at npms.io.",
-	"developer_name": "Rolf Koenders",
+	"name": "youtube",
+	"description": "Search for Youtube Videos",
+	"developer_name": "LifeOfCoding | Jimmy Rousseau",
 	"icon": "images/icon.png",
 	"options": {
 		"query_debounce": 1.5
 	},
 	"preferences": [{
-		"id": "npms_kw",
+		"id": "youtube_life",
 		"type": "keyword",
-		"name": "npm",
-		"description": "Search for javascript packages",
-		"default_value": "npm"
+		"name": "youtube",
+		"description": "Search for youtube videos",
+		"default_value": "yt"
 	}]
 }
