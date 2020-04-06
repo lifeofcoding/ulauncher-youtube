@@ -57,15 +57,16 @@ class KeywordQueryEventListener(EventListener):
         self.search_terms = searchKeyword
         self.max_results = 10
         self.videos = self.search()
+        results = self.videos
 
         items = []
-        for result in self.videos.to_json()
+        for result in results:
             package = result
             logger.debug(result['title'])
             items.append(ExtensionResultItem(icon='images/icon.png',
                                          name=package['tite'],
                                          description='crap',
-                                         on_enter=OpenUrlAction(package['link']])))
+                                         on_enter=OpenUrlAction(package['link'])))
 
         return RenderResultListAction(items)
 
