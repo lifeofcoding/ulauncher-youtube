@@ -63,7 +63,7 @@ class KeywordQueryEventListener(EventListener):
             package = result
             logger.debug(result['title'])
             items.append(ExtensionResultItem(icon='images/icon.png',
-                                         name=package['tite'],
+                                         name=package['title'],
                                          description='crap',
                                          on_enter=OpenUrlAction(package['link'])))
 
