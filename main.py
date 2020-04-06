@@ -23,7 +23,7 @@ class KeywordQueryEventListener(EventListener):
     def search(self):
         encoded_search = urllib.parse.quote(self.search_terms)
         BASE_URL = "https://youtube.com"
-        url = f"{BASE_URL}/results?search_query={encoded_search}&pbj=1"
+        url = "{BASE_URL}/results?search_query={encoded_search}&pbj=1"
         response = BeautifulSoup(requests.get(url).text, "html.parser")
         results = self.parse_html(response)
         if self.max_results is not None and len(results) > self.max_results:
@@ -59,7 +59,7 @@ class KeywordQueryEventListener(EventListener):
         self.videos = self.search()
 
         items = []
-        for result in self.videos
+        for result in self.videos.to_json()
             package = result
             logger.debug(result['title'])
             items.append(ExtensionResultItem(icon='images/icon.png',
