@@ -39,7 +39,7 @@ class KeywordQueryEventListener(EventListener):
                     "title": video["title"],
                     "link": video["href"],
                     "id": vid,
-                    "thumbnail": "https://img.youtube.com/vi/{vid}/default.jpg"
+                    "thumbnail": "https://img.youtube.com/vi/" + str(vid) + "/default.jpg"
                 }
                 results.append(video_info)
         return results
