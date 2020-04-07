@@ -33,11 +33,13 @@ class KeywordQueryEventListener(EventListener):
         results = []
         for video in soup.select(".yt-uix-tile-link"):
             if video["href"].startswith("/watch?v="):
-                id = video["href"][video["href"].index("=")+1:]
+                vid = video["href"][video["href"].index("=")+1:]
+
                 video_info = {
                     "title": video["title"],
                     "link": video["href"],
-                    "image": "https://img.youtube.com/vi/{id}/default.jpg"
+                    "id": vid,
+                    "thumbnail": "https://img.youtube.com/vi/{vid}/default.jpg"
                 }
                 results.append(video_info)
         return results
@@ -63,7 +65,7 @@ class KeywordQueryEventListener(EventListener):
         for result in results:
             package = result
             logger.debug(result['title'])
-            items.append(ExtensionResultItem(icon=package['image'],
+            items.append(ExtensionResultItem(icon=package['thumbnail'],
                                          name=package['title'],
                                          description='',
                                          on_enter=OpenUrlAction("https://youtube.com" + package['link'])))
