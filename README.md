@@ -1,8 +1,8 @@
 
-# npms extension
+# Youtube Search extension
 > A [ulauncher](https://ulauncher.io/) extension
 
 ![screenshot](screenshot.png)
 
-Search for Javascript packages at npms.io.
+Search for Youtube Videos
 
