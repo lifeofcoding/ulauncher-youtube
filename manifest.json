@@ -1,6 +1,6 @@
 {
 	"required_api_version": "^2.0.0",
-	"name": "youtube",
+	"name": "YouTube Search",
 	"description": "Search for Youtube Videos",
 	"developer_name": "LifeOfCoding | Jimmy Rousseau",
 	"icon": "images/icon.png",
@@ -10,7 +10,7 @@
 	"preferences": [{
 		"id": "youtube_life",
 		"type": "keyword",
-		"name": "youtube",
+		"name": "Youtube Search",
 		"description": "Search for youtube videos",
 		"default_value": "yt"
 	}]
