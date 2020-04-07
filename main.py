@@ -65,7 +65,7 @@ class KeywordQueryEventListener(EventListener):
         for result in results:
             package = result
             logger.debug(result['title'])
-            items.append(ExtensionResultItem(icon=package['thumbnail'],
+            items.append(ExtensionResultItem(icon='images/icon.png',
                                          name=package['title'],
                                          description='',
                                          on_enter=OpenUrlAction("https://youtube.com" + package['link'])))
