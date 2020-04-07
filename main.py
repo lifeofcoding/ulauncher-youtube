@@ -22,7 +22,7 @@ class YoutubeExtension(Extension):
 class KeywordQueryEventListener(EventListener):
     def search(self):
         encoded_search = urllib.parse.quote(self.search_terms)
-        url = "https://youtube.com/results?search_query={encoded_search}&pbj=1"
+        url = "https://youtube.com/results?search_query=" + str(encoded_search) + "&pbj=1"
         response = BeautifulSoup(requests.get(url).text, "html.parser")
         results = self.parse_html(response)
         if self.max_results is not None and len(results) > self.max_results:
