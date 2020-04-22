@@ -1,7 +1,8 @@
 import requests
 import logging
 import json
-import os, sys, bspath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"beautifulsoup4-4.9.0")
+import os, sys
+bspath = os.path.join(os.path.dirname(os.path.abspath(__file__)),"beautifulsoup4-4.9.0")
 sys.path.append(bspath)
 from bs4 import BeautifulSoup
 import urllib.parse
