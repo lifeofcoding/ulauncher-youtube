@@ -57,7 +57,7 @@ class KeywordQueryEventListener(EventListener):
         searchKeyword = event.get_argument()
 
         if not searchKeyword:
-            return;
+            return
 
         self.search_terms = searchKeyword
         self.max_results = 10
